@@ -2,36 +2,41 @@
 #let nim = "3624362458302045"
 #let prodi = "Teknologi Rekayasa Perangkat Lunak"
 #let matkul = "Interoperabilitas"
+#let dosen = "Sepyan Purnama Kristanto, S.Kom., M.Kom."
 
 #align(center)[
   #text(size: 18pt, weight: "bold")[
     LAPORAN PROJECT INTEGRASI DATA
   ]
 
-  \n
-  \n
+  #linebreak()
+  #linebreak()
 
   #text(size: 14pt)[
-    Tugas Mahasiswa 4 - Lead Integrator
+    Tugas Mahasiswa 4 – Lead Integrator
   ]
 
-  \n
-  \n
-  \n
+  #linebreak()
+  #linebreak()
+  #linebreak()
 
-  Nama :  #nama\\
-  NIM   : #nim \\
-  Prodi : #prodi \\
+  Nama  : #nama
+  #linebreak()
+  NIM   : #nim
+  #linebreak()
+  Prodi : #prodi
 
-  \n
-  \n
-  \n
+  #linebreak()
+  #linebreak()
+  #linebreak()
 
-  Mata Kuliah : #matkul \\
+  Mata Kuliah : #matkul
+  #linebreak()
+  Dosen       : #dosen
 
-  \n
-  \n
-  \n
+  #linebreak()
+  #linebreak()
+  #linebreak()
 
-  Tahun Akademik 2024/2025
+  Tahun Akademik 2025/2026
 ]
