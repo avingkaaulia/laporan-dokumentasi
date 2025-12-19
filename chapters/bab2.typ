@@ -6,8 +6,13 @@ Sesuai instruksi ujian untuk mencegah penggunaan *code generator* otomatis, kami
 == Watermark Code
 Berikut adalah bukti penggunaan suffix inisial pada variabel dan fungsi utama dalam proses integrasi data:
 
-=== Vendor A (Mahasiswa 1)
-#image("../public/vendorB/vendorB.png", width: 80%) KASIH PENJELASAN DAN LOGIC TRAP KAYA PUNYAKU.
+=== Vendor A (Mahasiswa 1) - Rahma Titis Pratiwi
+#image("../public/vendorA/vendorA.png", width: 80%)
+
+*Penjelasan:* Pada Vendor A, saya mengimplementasikan layanan API sederhana menggunakan Serverless Function yang didefinisikan pada file api/vendorA.js. Data produk didefinisikan secara eksplisit di dalam fungsi handler(req, res) menggunakan struktur array of object. Setiap objek merepresentasikan satu produk dengan atribut kd_produk, nm_brg, hrg, dan ket_stok. Penulisan data dilakukan secara manual tanpa menggunakan code generator otomatis, sehingga struktur dan isi data sepenuhnya dikontrol oleh Mahasiswa 1
+
+== Logic Trap (Custom Route & Git Authentication)
+Sebagai bentuk Logic Trap, Vendor A menerapkan endpoint API spesifik yang hanya tersedia melalui file api/vendorA.js. Data hanya dapat diakses apabila integrator mengetahui dan memanggil endpoint Vendor A secara eksplisit
 
 #v(50mm)
 === Vendor B (Mahasiswa 2) - SHAVIRA NINDYA PUTRIAWAN 
@@ -16,7 +21,9 @@ Berikut adalah bukti penggunaan suffix inisial pada variabel dan fungsi utama da
 *Penjelasan:* Pada baris **11 dan 12**, variabel `dataPath_shavira` dan `vendorData_shavira` menggunakan suffix nama saya. Hal ini membuktikan bahwa alur pembacaan data dari file JSON ke dalam memori sistem dikerjakan secara manual. Selain itu, pada baris **31**, saya menggunakan nama rute `/api/products_shavira` sebagai identitas unik layanan API Vendor B.
 
 == Logic Trap (Custom Route & Git Authentication)
-Sebagai bentuk pembuktian keaslian, saya menerapkan "Logic Trap" pada struktur output data untuk memastikan integrator (Mahasiswa 4) melakukan *parsing* secara manual. 
+Sebagai bentuk pembuktian keaslian, saya menerapkan "Logic Trap" pada struktur output data untuk memastikan integrator (Mahasiswa 4) melakukan *parsing* secara manual
+
+
 
 // Potongan kode dari server.js (Vendor B)
 ```javascript

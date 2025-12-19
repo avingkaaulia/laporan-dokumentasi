@@ -8,8 +8,11 @@ Mahasiswa 4 bertindak sebagai *Stateless Gateway*. Integrator tidak menyimpan da
 Proyek ini menggunakan pendekatan *Decentralized Database* di mana setiap vendor (A, B, dan C) memiliki database independen untuk menjaga integritas data masing-masing. Dengan sistem "dapur sendiri-sendiri" ini, jika database vendor A mengalami gangguan, data milik Vendor B tetap aman dan bisa diakses secara mandiri. Hal ini menjamin stabilitas sistem secara keseluruhan.
 
 == Vendor A
+ - **Vendor A (Rahma): ** Menggunakan PostgreSQL (NeonDB) sebagai media penyimpanan data produk.
+ - Tabel di NeonDB: #image("../public/vendorA/tableVendorA.png", width: 100%)
 
-
+ Proses seeding data dilakukan langsung oleh Vendor A dengan menjalankan perintah INSERT ke dalam database PostgreSQL (NeonDB). Data yang telah dimasukkan dapat diverifikasi melalui tampilan isi tabel pada NeonDB
+ - Data di NeonDB: #image("../public/vendorA/datavendorA.png", width: 100%)
 == Vendor B
 
 - **Vendor B (Shavira):** Menggunakan PostgreSQL (NeonDB) dengan skrip seeding seedData_shavira().

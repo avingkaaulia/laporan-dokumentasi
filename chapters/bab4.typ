@@ -15,8 +15,36 @@ Untuk mencapai interoperabilitas, setiap data dari vendor yang memiliki skema be
 - **Vendor C**: Produk kategori "Food" otomatis diberi label "(Recommended)".
 - **Tipe Data**: Seluruh nilai harga dipastikan bertipe *Integer*.
 
-#v(5mm)
 
+== VendorA
+Vendor A menyediakan API produk yang diakses oleh Integrator melalui endpoint Vercel. Data yang dikirimkan merupakan data asli (raw data) yang bersumber dari PostgreSQL (NeonDB) milik Vendor A dan belum melalui proses normalisasi maupun aturan bisnis dari gateway
+- *Endpoint URL*: #link("https://vendor-a-orcin.vercel.app/api/vendorA")
+
+=== Output JSON API (Vendor A) Ini disediakan untuk integrator
+```json
+[
+  {
+    "kd_produk": "A001",
+    "nm_brg": "Kopi Bubuk 200g",
+    "hrg": 15000,
+    "ket_stok": "ada"
+  },
+  {
+    "kd_produk": "A002",
+    "nm_brg": "Gula Aren 250g",
+    "hrg": 12000,
+    "ket_stok": "habis"
+  },
+  {
+    "kd_produk": "A003",
+    "nm_brg": "Teh Celup 50pcs",
+    "hrg": 9000,
+    "ket_stok": "ada"
+  }
+]
+```
+
+#v(5mm)
 
 == Vendor B 
 Vendor B menggunakan **PostgreSQL (NeonDB)** sebagai sumber data utama. Pengujian pada endpoint Vendor B menunjukkan respon data asli (*raw data*) sebelum diproses oleh Integrator.

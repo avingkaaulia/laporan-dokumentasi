@@ -15,8 +15,8 @@ Karena sistem ini berbasis layanan terdistribusi (*Distributed Services*), setia
   
   [Vendor A], 
   [Rahma Titis], 
-  [#link("https://github.com/user/vendor-a")], 
-  [#link("https://vendor-7btmgn6ma-rahma-titis-projects.vercel.app/vendorA")],
+  [#link("https://github.com/Rahmatitisss/vendorA.git")], 
+  [#link("https://vendor-a-orcin.vercel.app/api/vendorA")],
   
   [Vendor B], 
   [Shavira Nindya Putriawan], 
