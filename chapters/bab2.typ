@@ -30,4 +30,26 @@ Sebagai bentuk pembuktian keaslian, saya menerapkan "Logic Trap" pada struktur o
 Penggunaan rute khusus ini mengharuskan tim integrator (Mahasiswa 4) untuk membaca kode sumber saya secara teliti. Jika menggunakan asumsi rute generik, data tidak akan bisa ditarik, sehingga hal ini membuktikan adanya integrasi manual antar anggota tim.
 **Git Author Validation:** Seperti terlihat pada bagian bawah editor (status bar), terdapat keterangan akun "ShaviraNindya5" yang telah melakukan commit pada repositori ini. Ini membuktikan bahwa pengerjaan dilakukan di github saya sendiri
 
+=== Vendor C (Mahasiswa 3) - Martha Dwi Destya
+#image("../public/vendorC/vendorC.png", width: 80%)
 
+*Penjelasan:* Pada baris **11** variabel `dataPath_Martha` menggunakan suffix nama saya yaitu Martha sebagai watermark identitas. Hal ini menandakan bahwa file JSON vendorC.json dikerjakan secara spesifik oleh mahasiswa 3 dan tidak generik. Pada baris **12** variabel `vendorCData` menampung data dari file JSON ke dalam memori. Ini membuktikan alur pengambilan data dilakukan manual, bukan otomatis melalui code generator. Selanjutnya, pada baris **15**, saya membuat route khusus `/api/products_vendorC` untuk tim integrator (Mahasiswa 4) agar bisa mengakses data produk Vendor C. Selain itu, proses *database seeding* dilakukan melalui file `seed.js`, yang secara eksplisit membaca file `vendorC.json` dan memasukkan data ke NeonDB menggunakan query SQL terstruktur. Hal ini membuktikan bahwa integrasi data tidak bersifat otomatis, melainkan dirancang dan dijalankan secara sadar oleh mahasiswa  3 .
+
+== Logic Trap (Custom Route & Git Authentication)
+Sebagai bentuk *Logic Trap*, saya menerapkan kombinasi **struktur JSON bertingkat (nested)** dan **mekanisme seeding manual ke NeonDB**. Pendekatan ini mengharuskan tim integrator (Mahasiswa 4) untuk memahami struktur data secara detail sebelum melakukan proses integrasi.
+
+```javascript
+// Potongan kode dari seed.js (Vendor C)
+*for (let item of data) {
+      // Masukkan ke tabel products_json
+      await client.query(
+        `INSERT INTO products_json (id, details, pricing, stock)
+         VALUES ($1, $2, $3, $4)
+         ON CONFLICT (id) DO NOTHING`,
+        [item.id, item.details, item.pricing, item.stock]
+      );*
+      ```
+Integrator (Mahasiswa 4) tidak dapat langsung menggunakan data Vendor C tanpa memahami struktur internalnya. Harga akhir produk tidak tersedia secara langsung, melainkan harus dihitung dari `base_price` dan `tax` yang berada di dalam objek `pricing`. Jika integrator hanya mengasumsikan struktur data flat, maka proses normalisasi data ke format standar akan gagal.
+Dengan adanya Logic Trap ini, integrator diwajibkan membaca dan memahami kode Vendor C secara manual, sehingga membuktikan bahwa proses integrasi dilakukan secara sah dan kolaboratif.
+
+**Git Author Validation : ** Berdasarkan riwayat commit pada repositori GitHub, perubahan pada file vendorC.json, server.js, dan seed.js tercatat atas akun GitHub Mahasiswa 3 (Martha-Dwi). Hal ini membuktikan bahwa pengembangan Vendor C dilakukan secara mandiri oleh mahasiswa 3.
