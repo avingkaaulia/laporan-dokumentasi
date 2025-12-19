@@ -25,7 +25,7 @@ Karena sistem ini berbasis layanan terdistribusi (*Distributed Services*), setia
   
   [Vendor C], 
   [Mahasiswa 3], 
-  [#link("https://github.com/user/vendor-c")], 
+  [#link("https://github.com/Martha-Dwi/vendorC-kuliner")], 
   [#link("https://vendorc-kuliner.vercel.app/products")],
   
   [Integrator], 

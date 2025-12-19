@@ -57,3 +57,73 @@ Vendor B menggunakan **PostgreSQL (NeonDB)** sebagai sumber data utama. Pengujia
   }
 ]
 ```
+
+== Vendor C
+Vendor C menggunakan **PostgreSQL (NeonDB)** sebagai sumber data utama. Data produk diambil melalui API yang telah saya sediakan pada endpoint Vercel, dan digunakan oleh integrator untuk penggabungan serta normalisasi data.
+- **Endpoint URL Vendor C** : #link("https://vendorc-kuliner.vercel.app/products")
+
+=== Output JSON API (Vendor C) Ini disediakan untuk integrator
+```json
+[
+  {
+    "id": 501,
+    "details": {
+      "name": "Nasi Tempong",
+      "category": "Food"
+    },
+    "pricing": {
+      "base_price": 20000,
+      "tax": 2000
+    },
+    "stock": 50
+  },
+  {
+    "id": 502,
+    "details": {
+      "name": "Es Teh Manis",
+      "category": "Drink"
+    },
+    "pricing": {
+      "base_price": 5000,
+      "tax": 500
+    },
+    "stock": 100
+  },
+  {
+    "id": 503,
+    "details": {
+      "name": "Pisang Goreng",
+      "category": "Snack"
+    },
+    "pricing": {
+      "base_price": 10000,
+      "tax": 1000
+    },
+    "stock": 30
+  },
+  {
+    "id": 504,
+    "details": {
+      "name": "Ayam Bakar Taliwang",
+      "category": "Food"
+    },
+    "pricing": {
+      "base_price": 35000,
+      "tax": 3500
+    },
+    "stock": 25
+  },
+  {
+    "id": 505,
+    "details": {
+      "name": "Jus Alpukat",
+      "category": "Drink"
+    },
+    "pricing": {
+      "base_price": 12000,
+      "tax": 1200
+    },
+    "stock": 40
+  }
+]
+```
