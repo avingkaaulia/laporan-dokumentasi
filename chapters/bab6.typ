@@ -29,7 +29,7 @@ Karena sistem ini berbasis layanan terdistribusi (*Distributed Services*), setia
   [#link("https://vendorc-kuliner.vercel.app/products")],
   
   [Integrator], 
-  [Mahasiswa 4], 
+  [Avingka Aulia], 
   [#link("https://github.com/avingkaaulia/interoperability-integrator")], 
   [#link("https://interoperability-integrator.vercel.app/products")],
 )
