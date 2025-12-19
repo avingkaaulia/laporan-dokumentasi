@@ -8,5 +8,6 @@ Project ini bertujuan untuk mengintegrasikan data dari tiga vendor berbeda
 menggunakan konsep API Gateway, di mana satu sistem pusat bertugas mengambil,
 menyesuaikan, dan menyajikan data dalam format yang seragam.
 
+Mahasisa 2 berperan sebagai 
 Mahasiswa 4 berperan sebagai Lead Integrator yang bertanggung jawab atas proses
-penggabungan, normalisasi, dan penyajian data.
+penggabungan, normalisasi, dan penyajian data. 
