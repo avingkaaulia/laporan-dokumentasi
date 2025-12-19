@@ -30,8 +30,8 @@ Karena sistem ini berbasis layanan terdistribusi (*Distributed Services*), setia
   
   [Integrator], 
   [Mahasiswa 4], 
-  [#link("https://github.com/user/integrator")], 
-  [#link("https://link-vercel-integrator.app")],
+  [#link("https://github.com/avingkaaulia/interoperability-integrator")], 
+  [#link("https://interoperability-integrator.vercel.app/products")],
 )
 
 = Integrasi & Git Branching

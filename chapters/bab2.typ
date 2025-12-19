@@ -60,3 +60,22 @@ Integrator (Mahasiswa 4) tidak dapat langsung menggunakan data Vendor C tanpa me
 Dengan adanya Logic Trap ini, integrator diwajibkan membaca dan memahami kode Vendor C secara manual, sehingga membuktikan bahwa proses integrasi dilakukan secara sah dan kolaboratif.
 
 **Git Author Validation : ** Berdasarkan riwayat commit pada repositori GitHub, perubahan pada file vendorC.json, server.js, dan seed.js tercatat atas akun GitHub Mahasiswa 3 (Martha-Dwi). Hal ini membuktikan bahwa pengembangan Vendor C dilakukan secara mandiri oleh mahasiswa 3.
+
+=== Lead Integrator (Mahasiswa 4) - Avingka Aulia
+#image("../public/integrator/server.png", width: 80%)
+
+*Penjelasan:*  
+Pada file `server.js`, saya menuliskan fungsi normalisasi data secara terpisah untuk setiap vendor, yaitu `fromVendorA`, `fromVendorB`, dan `fromVendorC`. Penamaan fungsi ini menunjukkan bahwa proses integrasi tidak bersifat generik, melainkan disesuaikan secara manual dengan struktur data masing-masing vendor. Seluruh field seperti `id`, `nama`, `harga_final`, `status`, dan `sumber` ditentukan sendiri oleh saya sebagai integrator.
+
+== Logic Trap (Parsing Manual & Struktur Berbeda)
+
+Sebagai bentuk *Logic Trap*, setiap vendor memiliki struktur data yang berbeda sehingga tidak dapat diproses menggunakan asumsi struktur yang sama. Hal ini memaksa saya sebagai integrator untuk membaca dokumentasi dan kode sumber vendor secara manual.
+
+Vendor A menggunakan struktur field sederhana seperti `kd_produk`, `nm_brg`, dan `hrg`, sehingga saya menerapkan logika diskon 10% secara langsung.  
+Vendor B menggunakan struktur boolean `isAvailable` dan field `price` yang sudah numerik.  
+Vendor C memiliki struktur JSON bertingkat (*nested*) dengan objek `details` dan `pricing`, sehingga harga akhir harus dihitung manual dari `base_price` dan `tax`.
+
+```javascript
+// Contoh potongan kode normalisasi Vendor C
+const harga = item.pricing.base_price + item.pricing.tax;
+ ```

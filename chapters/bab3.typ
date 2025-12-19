@@ -34,3 +34,12 @@ Proses seeding data untuk Vendor C dilakukan sepenuhnya oleh saya, Martha, denga
 #image("../public/vendorC/dataVendorC.png", width: 100%)
 
 Hal ini membuktikan bahwa setiap vendor bertanggung jawab terhadap pengelolaan data mentah masing-masing. Sementara itu, Mahasiswa 4 sebagai integrator tidak mengubah data asli di database vendor; tugas integrator adalah mengambil, menormalisasi, dan memproses data sesuai kebutuhan sistem, sehingga data mentah tetap terjaga integritasnya.
+
+== Peran Integrator terhadap Database Vendor
+
+Berdasarkan arsitektur ini, Mahasiswa 4 sebagai integrator tidak melakukan perubahan apa pun terhadap data mentah di database vendor. Tugas integrator hanya sebatas:
+- Mengambil data melalui API vendor
+- Menghitung nilai tambahan seperti harga akhir atau status produk
+- Menyusun ulang data ke format JSON standar
+
+Pendekatan ini menjaga integritas data asli vendor dan memastikan bahwa setiap vendor tetap memiliki kendali penuh atas database mereka masing-masing.
