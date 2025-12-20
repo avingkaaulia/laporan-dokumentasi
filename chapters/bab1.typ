@@ -1,9 +1,10 @@
 = BAB I
 == Pendahuluan
 
-Pemerintah Kabupaten Banyuwangi saat ini sedang mengembangkan "Banyuwangi Marketplace" untuk menyatukan data produk UMKM dalam satu dashboard terpadu. Kendala utamanya adalah data tersebut berasal dari tiga vendor kasir yang berbeda-beda, sehingga struktur datanya (_JSON Schema_) tidak seragam.
+Pemerintah Kabupaten Banyuwangi saat ini sedang mengembangkan "Banyuwangi Marketplace" untuk menyatukan data produk UMKM dalam satu dashboard terpadu. Kendala utama yang dihadapi adalah data produk berasal dari beberapa vendor kasir yang berbeda, yaitu Vendor A, Vendor B, dan Vendor C, di mana masing-masing vendor memiliki sistem backend serta struktur data (_JSON Schema_) yang tidak seragam.
 
-Dalam proyek ini, kami bertindak sebagai tim *Backend Integrator*. Tugas utama kami adalah membuat sebuah layanan yang bisa menarik data dari ketiga vendor tersebut, melakukan *parsing*, serta menormalisasi datanya menjadi satu format standar yang siap digunakan oleh dashboard pemerintah.
+Dalam proyek ini, dikembangkan sebuah layanan *Backend Integrator* yang berfungsi sebagai lapisan integrasi (*interoperability layer*). Layanan ini bertugas untuk mengambil data produk dari backend Vendor A, Vendor B, dan Vendor C melalui API, melakukan proses *parsing* dan normalisasi data, serta menyajikannya ke dalam satu format standar yang siap digunakan oleh dashboard Pemerintah Kabupaten Banyuwangi.
+
 
 == Pembagian Kerja
 

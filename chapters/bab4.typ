@@ -166,3 +166,5 @@ Vendor C menggunakan **PostgreSQL (NeonDB)** sebagai sumber data utama. Data pro
   }
 ]
 ```
+
+== integrator
