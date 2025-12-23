@@ -48,6 +48,6 @@ Hasil pengujian menunjukkan bahwa data dari berbagai vendor berhasil digabungkan
 == Link Video Demo
 Sebagai bukti bahwa sistem integrator berjalan dengan baik, berikut disertakan video demo pengujian endpoint integrator:
 
-Link Video Demo: [Masukkan Link Video Integrator Di Sini]
+Link Video Demo: [https://www.youtube.com/watch?v=vq_4ZwyewRg]
 
 Video tersebut menampilkan proses pemanggilan endpoint integrator serta hasil respon JSON yang dihasilkan secara real-time.
