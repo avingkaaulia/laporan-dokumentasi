@@ -1,4 +1,4 @@
 #set document(
   title: "Laporan Project Integrasi Data Vendor",
-  author: "Kelompok 4",   
+  author: "Mahasiswa 4 - Integrator",   
 )
