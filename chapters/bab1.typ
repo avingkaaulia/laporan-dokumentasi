@@ -17,13 +17,13 @@ Berikut adalah detail pembagian tugas tim untuk menangani perbedaan spesifikasi 
   fill: (x, y) => if y == 0 { gray.lighten(90%) },
   [*Mahasiswa*], [*Peran*], [*Tanggung Jawab*],
   
-  [Mahasiswa 1], [Vendor A (Warung Legacy)], [Menangani sistem lama di mana semua data berupa _String_ (termasuk harga) dan stok menggunakan istilah "ada/habis".],
+  [Rahma], [Vendor A (Warung Legacy)], [Menangani sistem lama di mana semua data berupa _String_ (termasuk harga) dan stok menggunakan istilah "ada/habis".],
   
-  [Mahasiswa 2], [Vendor B (Distro Modern)], [Menyediakan data standar dengan Bahasa Inggris, format _camelCase_, serta tipe data _Number_ dan _Boolean_.],
+  [Shavira], [Vendor B (Distro Modern)], [Menyediakan data standar dengan Bahasa Inggris, format _camelCase_, serta tipe data _Number_ dan _Boolean_.],
   
-  [Mahasiswa 3], [Vendor C (Resto & Kuliner)], [Mengelola data kompleks (_Nested Object_) yang memisahkan harga dasar dengan pajak serta kategori produk.],
+  [Martha], [Vendor C (Resto & Kuliner)], [Mengelola data kompleks (_Nested Object_) yang memisahkan harga dasar dengan pajak serta kategori produk.],
   
-  [Mahasiswa 4], [Lead Integrator], [Menyusun logika penggabungan data, normalisasi tipe data, perhitungan diskon Vendor A, dan pemberian label khusus Vendor C.],
+  [Avingka], [Lead Integrator], [Menyusun logika penggabungan data, normalisasi tipe data, perhitungan diskon Vendor A, dan pemberian label khusus Vendor C.],
 )
 
 #v(5mm)

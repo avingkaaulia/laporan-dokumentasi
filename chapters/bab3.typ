@@ -5,7 +5,7 @@
 Mahasiswa 4 bertindak sebagai *Stateless Gateway*. Integrator tidak menyimpan data produk di database lokal, melainkan melakukan *fetching* secara dinamis dari API Vendor A, B, dan C. Hal ini memastikan data yang tampil di Dashboard selalu merupakan data terbaru (*real-time*) dari masing-masing vendor.
 
 == Strategi Penyimpanan Data 
-Proyek ini menggunakan pendekatan *Decentralized Database* di mana setiap vendor (A, B, dan C) memiliki database independen untuk menjaga integritas data masing-masing. Dengan sistem "dapur sendiri-sendiri" ini, jika database vendor A mengalami gangguan, data milik Vendor B tetap aman dan bisa diakses secara mandiri. Hal ini menjamin stabilitas sistem secara keseluruhan.
+Dimana setiap vendor (A, B, dan C) memiliki database independen untuk menjaga integritas data masing-masing. Dengan sistem "dapur sendiri-sendiri" ini, jika database vendor A mengalami gangguan, data milik Vendor B tetap aman dan bisa diakses secara mandiri. Hal ini menjamin stabilitas sistem secara keseluruhan.
 
 == - Vendor A
  - **Vendor A (Rahma): ** Menggunakan PostgreSQL (NeonDB) sebagai media penyimpanan data produk.
