@@ -1,71 +1,36 @@
-#set page(
-  paper: "a4",
-  margin: (x: 2.5cm, y: 2.5cm),
-  numbering: none, 
-)
-
-#set text(
-  font: "Times New Roman",
-  size: 12pt,
-  lang: "id"
-)
-
-#align(center)[
-  #text(weight: "bold", size: 12pt)[
-    POLITEKNIK NEGERI BANYUWANGI
-  ]
-
-  #v(1cm)
-
-  #image("public/logo_pwg.png", width: 8cm)
-
-  #v(1.5cm)
-
-  #text(weight: "bold", size: 14pt)[
-    LAPORAN FINAL PROJECT
-  ]
-
-  #v(0.4cm)
-
-  #text(weight: "bold", size: 14pt)[
-    INTEROPERABILITAS
-  ]
-
-  #v(0.3cm)
-
-  #text(size: 11pt)[
-    Semester Ganjil 2024/2025 \
-    Kelompok 04
-  ]
-
-  #v(2cm)
-
-  #text(weight: "bold")[
-    Disusun Oleh:
-  ]
-
-  #v(0.6cm)
-
-  #box(width: 95%)[
-    #grid(
-      columns: (6cm, 3cm, 1fr),
-      column-gutter: 12pt,
-      row-gutter: 1em,
+#let cover_page(title: "", semester: "", team_number: "", members: ()) = {
+  set page(numbering: none)
+  align(center)[
+    #v(2em)
+    #text(size: 16pt, weight: "bold")[POLITEKNIK NEGERI BANYUWANGI]
+    
+    #v(1cm)
+    #image("public/logo_pwg.png", width: 8cm)
+    
+    #v(2em)
+    #text(size: 18pt, weight: "bold")[#upper(title)]
+    #v(1em)
+    #text(size: 14pt)[Mobile Application Development]
+    #linebreak()
+    #text(size: 14pt)[#semester]
+    
+    #v(4em)
+    #text(size: 14pt, weight: "bold")[Disusun Oleh Kelompok #team_number:]
+    #v(1em)
+    
+    #table(
+      columns: (1fr, auto, 1fr),
+      stroke: none,
       align: (left, left, left),
-
-      [Rahma Titis Pratiwi], [362458302052], [Vendor A],
-      [Shavira Nindya Putriawan], [362458302150], [Vendor B],
-      [Martha Dwi Destya], [362458302035], [Vendor C],
-      [Avingka Aulia], [362458302045], [Lead Integrator],
+      ..members.map(m => (
+        text(weight: "bold")[#m.name], 
+        [#m.nim], 
+        text(style: "italic")[#m.role]
+      )).flatten()
     )
+
+    #v(1fr)
+    #text(size: 12pt)[Tahun 2025]
   ]
-
-  #v(1fr)
-
-  #text(size: 12pt)[
-    Tahun 2025
-  ]
-]
-
-
-
+  pagebreak()
+}

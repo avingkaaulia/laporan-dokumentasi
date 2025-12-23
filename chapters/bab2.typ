@@ -1,5 +1,5 @@
 = BAB II
-== Bukti Keaslian Kode (Strict Mode)
+= Bukti Keaslian Kode (Strict Mode)
 
 Sesuai instruksi ujian untuk mencegah penggunaan *code generator* otomatis, kami menerapkan identitas unik pada penulisan kode sumber. 
 

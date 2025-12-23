@@ -1,18 +1,24 @@
-"#import "conf.typ": project
+#import "conf.typ": project
+#import "cover.typ": cover_page
 
-#show: project.with(
-  title: "Interoperabilitas",
-  semester: "Semester Ganjil 2024/2025",
-  team_number: "04",
-  members: (
-    (name: "Rahma Titis Pratiwi", nim: "362458302052", role: "Vendor A"),
-    (name: "Shavira Nindya Putriawan", nim: "362458302150", role: "Vendor B"),
-    (name: "Martha Dwi Destya", nim: "362458302035", role: "Vendor C"),
-    (name: "Avingka Aulia", nim: "362458302041", role: "Lead Integrator"),
-  )
+// Data Kelompok Sesuai Pesan Sebelumnya
+#let members_data = (
+  (name: "Rahma Titis Pratiwi", nim: "362458302052", role: "Vendor A"),
+  (name: "Shavira Nindya Putriawan", nim: "362458302150", role: "Vendor B"),
+  (name: "Martha Dwi Destya", nim: "362458302136", role: "Vendor C"),
+  (name: "Avingka Aulia", nim: "362458302045", role: "Lead Integrator"),
 )
 
-// Konten di bawah ini otomatis akan memiliki nomor halaman
+#show: doc => project(
+  title: "INTEROPERABILITAS",
+  semester: "Semester Ganjil 2024/2025",
+  team_number: "04",
+  members: members_data,
+  doc
+)
+
+
+// Include Bab-bab
 #include "chapters/bab1.typ"
 #include "chapters/bab2.typ"
 #include "chapters/bab3.typ"

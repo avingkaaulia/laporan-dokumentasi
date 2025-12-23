@@ -1,6 +1,5 @@
 = BAB III
 = Arsitektur Sistem Integrasi (Backend & Database) 
-
 = Integrator (Stateless Gateway)
 Mahasiswa 4 bertindak sebagai *Stateless Gateway*. Integrator tidak menyimpan data produk di database lokal, melainkan melakukan *fetching* secara dinamis dari API Vendor A, B, dan C. Hal ini memastikan data yang tampil di Dashboard selalu merupakan data terbaru (*real-time*) dari masing-masing vendor.
 

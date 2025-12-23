@@ -1,5 +1,5 @@
+= BAB VI
 = Integrasi & Repositori Layanan
-
 == Git Graph Repo Kelompok
 
 Berikut adalah screenshot Git Graph dari repo kelompok kita:

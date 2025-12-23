@@ -1,3 +1,4 @@
+= BAB IV
 == Arsitektur Gateway & Integrasi
 - *Endpoint URL*: #link("https://interoperability-integrator.vercel.app/products")
 Sistem integrator dibangun menggunakan *Node.js* dan *Express.js* dengan konsep *Stateless Gateway*. Artinya, integrator tidak menyimpan data produk ke dalam database lokal, melainkan hanya mengambil data dari Vendor A, Vendor B, dan Vendor C melalui protokol HTTP (*fetch*).
